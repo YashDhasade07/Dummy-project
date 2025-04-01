@@ -142,27 +142,127 @@
 
 ////////
 
-console.log("Start");
+// console.log("Start");
 
-const promise = new Promise((resolve, reject) => {
-    console.log("Promise constructor");
-    resolve();
-});
+// const promise = new Promise((resolve, reject) => {
+//     console.log("Promise constructor");
+//     resolve();
+// });
 
-setTimeout(() => {
-    console.log("setTimeout");
-}, 0);
+// setTimeout(() => {
+//     console.log("setTimeout");
+// }, 0);
 
-promise.then(() => {
-    console.log("Promise then 1");
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            console.log("Promise inside setTimeout");
-            resolve();
-        }, 0);
-    });
-}).then(() => {
-    console.log("Promise then 2");
-});
+// promise.then(() => {
+//     console.log("Promise then 1");
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("Promise inside setTimeout");
+//             resolve();
+//         }, 0);
+//     });
+// }).then(() => {
+//     console.log("Promise then 2");
+// });
 
-console.log("End");
+// console.log("End");
+
+
+// // /////////
+// async function abc(){
+//     console.log(1);
+    
+//     await new Promise((res)=>{
+//         setTimeout(()=>{
+//             console.log(2)
+//             res()
+//         },2000)
+//     })
+    
+//     console.log(3)
+// }
+// abc()
+
+// async function firstFunc() {
+//   console.log(1)
+//  await new Promise((resolve,reject)=> setTimeout( ()=> resolve(console.log(2)) , 1000))
+//   console.log(3)
+// }
+
+// firstFunc()
+
+//  Rest
+
+// function rest(...ret){
+//     console.log(ret)
+// }
+// rest(1,2,3,4,5,6)
+
+// ///////////////////// getter setter
+
+let person ={
+    Fname: "Yash",
+    Lname: "Dhasade",
+    
+   get getName(){
+        return `${this.Fname} ${this.Lname}`
+    },
+    set setName(val){
+        let parts = val.split(' ');
+        this.Fname = parts[0]
+        this.Lname = parts[1]
+    }
+}
+person.setName='Jhon Doe'
+console.log(person);
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

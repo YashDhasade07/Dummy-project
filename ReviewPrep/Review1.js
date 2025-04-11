@@ -107,3 +107,24 @@
     // person1.sayHello(); // Output: Hello, my name is Yash and I am 25 years old.
     // console.log(person1.newVar);
 
+
+    // /////////
+
+      
+    // const obj = {
+    //     value: 10,
+    //     getValue: () => this.value,
+    //   };
+    //   console.log(obj.getValue); // ?
+
+    // /////////
+    //   async function getData() {
+    //     return "Data fetched";
+    //   }
+      
+    //   const result = await getData();
+    //   console.log(result);
+    /////////////
+
+
+console.log(typeof (function a(){})); 

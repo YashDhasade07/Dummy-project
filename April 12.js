@@ -1,4 +1,3 @@
-
 // console.log("Start of script");
 
 // // Using setTimeout (executes after the timer expires)
@@ -10,7 +9,6 @@
 //   console.log("Executed setImmediate");
 // });
 // // console.log("End of script");
-
 
 // Promise.resolve('promise is resolved')
 //   .then((res) => {
@@ -30,18 +28,13 @@
 //     console.log(res);
 //   })
 
-
-
-
-
-
 // let obj ={a:1,B:2,c:3};
 
 // // for(let val of obj){
 // // }
 // obj.forEach((val)=> console.log((val)))
 //     // console.log(Object.values(obj))
-    
+
 //     if(true){
 //         console.log(Object.values(obj))
 //     }else{
@@ -71,10 +64,7 @@
 // //   console.log("Executed queueMicrotask");
 // // });
 
-
-
 // console.log("End of script");
-
 
 // console.log(this)
 
@@ -97,7 +87,7 @@
 //   .then((res) => {
 //     console.log(res);
 //   })
-  //////
+//////
 //   .catch((err) => {
 //     console.log("Catch 2", err);
 //   });
@@ -110,9 +100,6 @@
 
 // console.log("Try programiz.pro");
 
-
-
-
 // let a = 10;
 // if( a = 1){
 //     console.log('abc')
@@ -121,8 +108,7 @@
 // }
 // console.log(a=3)
 
-
-let arr = [1,2,3];
+let arr = [1, 2, 3];
 
 // for(let val of arr){
 //     console.log(val);
@@ -136,17 +122,32 @@ let arr = [1,2,3];
 
 // console.log(a)
 
-function abc (a,b){
-    this.a = a;
-    this.b = b
-}
+// function abc (a,b){
+//     this.a = a;
+//     this.b = b
+// }
 
-let def = new abc('s','ss')
-console.log(def)
+// let def = new abc('s','ss')
+// console.log(def)
 
+// for(var i =0; i<3 ; i++){
+//     // i =0;
+//     setTimeout((i)=>{
+//         console.log(i)
+//     },100,i)
+// }
 
+let str = "promise is resolved";
 
-
-
-
-
+Promise.resolve(str)
+    .then((a)=>{ console.log(a)
+        return a
+    }).then((a)=>{ 
+        console.log(a);
+        throw new Error(a)
+    }).catch((err)=>{
+        console.log(err);
+        return err
+    }).then((a)=>{ 
+        console.log(a);
+    })

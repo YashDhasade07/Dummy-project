@@ -184,19 +184,37 @@
 //   });
 
 //////////
-async function outer() {
+// async function outer() {
+//     console.log("1");
+//     await inner();
+//     console.log("3");
+//   }
+//   async function inner() {
+//     console.log("2");
+//   }
+  
+//   outer();
+//   console.log("4");
+  
+  ///
+  Promise.resolve()
+  .then(() => {
     console.log("1");
-    await inner();
-    console.log("3");
-  }
-  async function inner() {
-    console.log("2");
-  }
-  
-  outer();
-  console.log("4");
-  
-  
+    return Promise.resolve('2');
+  })
+  .then((res) => console.log(res));
+
+Promise.resolve().then(() => console.log("3"));
+
+Promise.resolve()
+  .then(() => {
+    console.log("4");
+  })
+  .then(() => {
+    console.log("5");
+    return Promise.resolve();
+  })
+  .then(() => console.log("6"));
   
   
   
